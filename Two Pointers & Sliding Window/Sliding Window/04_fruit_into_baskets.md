@@ -53,7 +53,6 @@ public:
 📦 Space: O(1)
 ```
 
----
 
 ## ⚡ Better Sliding Window (with frequency map + while)
 
@@ -103,7 +102,6 @@ public:
 📦 Space: O(1)
 ```
 
----
 
 ## 🚀 One-Shrink Version (remove innner while loop) -- best
 
@@ -152,7 +150,6 @@ public:
 📦 Space: O(1)
 ```
 
----
 
 ## ⚠️ Important Note
 
@@ -168,9 +165,6 @@ public:
 | Sliding Window + while | ✅ Best and standard | Always safe                        |
 | Without while          | ⚠️ Risky             | Only when one shrink is guaranteed |
 
----
-
----
 
 ## Quick Checklist
 

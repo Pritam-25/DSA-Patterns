@@ -14,7 +14,6 @@
 - Time: **O(n² \* m)**
 - Space: **O(1)** (constant hashmap size)
 
----
 
 ### 🧾 Code (Brute Force)
 
@@ -86,7 +85,6 @@ public:
 };
 ```
 
----
 
 ## ⚡ Optimal Approach (Sliding Window)
 
@@ -109,7 +107,6 @@ public:
 - Time: **O(n + m)**
 - Space: **O(1)**
 
----
 
 ### 🧾 Code (Optimal)
 
@@ -168,7 +165,6 @@ public:
 };
 ```
 
----
 
 ## 🖼️ Visualization
 

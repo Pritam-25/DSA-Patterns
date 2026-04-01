@@ -51,7 +51,6 @@ public:
 📦 Space: O(σ) (or O(1) for fixed alphabet)
 ```
 
----
 
 ## ⚡ Better Sliding Window (with inner while)
 
@@ -98,7 +97,6 @@ public:
 📦 Space: O(σ) (or O(1) for fixed alphabet)
 ```
 
----
 
 ## 🚀 Optimal Approach (last-seen index jump)
 
@@ -141,7 +139,6 @@ public:
 📦 Space: O(σ) (or O(1) for fixed alphabet)
 ```
 
----
 
 ## Example
 
