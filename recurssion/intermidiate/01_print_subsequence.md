@@ -221,7 +221,7 @@ Time: O(2^n)
 Space: O(n)
 ```
 
-## 🌳 Recursion Tree (Example: `[3,1,2], k = 3`)
+### 🌳 Recursion Tree (Example: `[3,1,2], k = 3`)
 
 ![image.png](../../images/generate_subsequence_sum_greater_than_k.png)
 
