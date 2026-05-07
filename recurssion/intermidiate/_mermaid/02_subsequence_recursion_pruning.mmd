@@ -1,0 +1,42 @@
+---
+config:
+  theme: default
+  layout: dagre
+---
+flowchart TB
+    A["1: f(0, [], sum=0)"] -- add 3 --> B["2: f(1, [3], sum=3)"]
+    A -- not take 3 --> I["6: f(1, [], sum=0)"]
+    B -- add 1 --> X["PRUNE (sum=4 > 3)"]
+    B -- not take 1 --> C["3: f(2, [3], sum=3)"]
+    C -- add 2 --> Y["PRUNE (sum=5 > 3)"]
+    C -- not take 2 --> D["4: f(3, [3], sum=3)"]
+    D -- PRINT 1st --> D1(["[3]"])
+    I -- add 1 --> J["7: f(2, [1], sum=1)"]
+    I -- not take 1 --> M["10: f(2, [], sum=0)"]
+    J -- add 2 --> K["8: f(3, [1,2], sum=3)"]
+    J -- not take 2 --> L["9: f(3, [1], sum=1)"]
+    K -- PRINT 2nd --> K1(["[1,2]"])
+    L -- skip --> L1["sum != k"]
+    M -- add 2 --> N["11: f(3, [2], sum=2)"]
+    M -- not take 2 --> O["12: f(3, [], sum=0)"]
+    N -- skip --> N1["sum != k"]
+    O -- skip --> O1["sum != k"]
+
+    style A fill:#BBDEFB,stroke:#2962FF,font-size:20px
+    style B fill:#C8E6C9,stroke:#00C853,font-size:20px
+    style I fill:#FFE0B2,stroke:#FF6D00,font-size:20px
+    style X fill:#EF5350,stroke:#B71C1C,color:#fff,font-size:20px
+    style C fill:#FFE0B2,stroke:#FF6D00,font-size:20px
+    style Y fill:#EF5350,stroke:#B71C1C,color:#fff,font-size:20px
+    style D fill:#FFE0B2,stroke:#FF6D00,font-size:20px
+    style D1 fill:#FFF9C4,stroke:#FFD600,font-size:20px
+    style J fill:#C8E6C9,stroke:#00C853,font-size:20px
+    style M fill:#FFE0B2,stroke:#FF6D00,font-size:20px
+    style K fill:#C8E6C9,stroke:#00C853,font-size:20px
+    style L fill:#FFE0B2,stroke:#FF6D00,font-size:20px
+    style K1 fill:#FFF9C4,stroke:#FFD600,font-size:20px
+    style L1 fill:#E0E0E0,stroke:#616161,font-size:18px
+    style N fill:#C8E6C9,stroke:#00C853,font-size:20px
+    style O fill:#FFE0B2,stroke:#FF6D00,font-size:20px
+    style N1 fill:#E0E0E0,stroke:#616161,font-size:18px
+    style O1 fill:#E0E0E0,stroke:#616161,font-size:18px

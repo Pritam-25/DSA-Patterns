@@ -1,0 +1,52 @@
+---
+config:
+  theme: default
+  layout: dagre
+---
+flowchart TB
+    A["1: f(0, [])"] -- add 3 --> B["2: f(1, [3])"]
+    A -- not take 3 --> I["9: f(1, [])"]
+    B -- add 1 --> C["3: f(2, [3,1])"]
+    B -- not take 1 --> F["6: f(2, [3])"]
+    C -- add 2 --> D["4: f(3, [3,1,2])"]
+    C -- not take 2 --> E["5: f(3, [3,1])"]
+    D -- PRINT (1st) --> D1(["[3,1,2]"])
+    E -- PRINT (2nd) --> E1(["[3,1]"])
+    F -- add 2 --> G["7: f(3, [3,2])"]
+    F -- not take 2 --> H["8: f(3, [3])"]
+    G -- PRINT (3rd) --> G1(["[3,2]"])
+    H -- PRINT (4th) --> H1(["[3]"])
+    I -- add 1 --> J["10: f(2, [1])"]
+    I -- not take 1 --> M["13: f(2, [])"]
+    J -- add 2 --> K["11: f(3, [1,2])"]
+    J -- not take 2 --> L["12: f(3, [1])"]
+    K -- PRINT (5th) --> K1(["[1,2]"])
+    L -- PRINT (6th) --> L1(["[1]"])
+    M -- add 2 --> N["14: f(3, [2])"]
+    M -- not take 2 --> O["15: f(3, [])"]
+    N -- PRINT (7th) --> N1(["[2]"])
+    O -- PRINT (8th) --> O1(["[]"])
+
+    style A fill:#BBDEFB,stroke:#2962FF,font-size:24px
+    style B fill:#C8E6C9,stroke:#00C853,font-size:24px
+    style I fill:#FFCDD2,stroke:#D50000,font-size:24px
+    style C fill:#C8E6C9,stroke:#00C853,font-size:24px
+    style F fill:#FFCDD2,stroke:#D50000,font-size:24px
+    style D fill:#C8E6C9,stroke:#00C853,font-size:24px
+    style E fill:#FFCDD2,stroke:#D50000,font-size:24px
+    style D1 fill:#FFF9C4,stroke:#FFD600,font-size:24px
+    style E1 fill:#FFF9C4,stroke:#FFD600,font-size:24px
+    style G fill:#C8E6C9,stroke:#00C853,font-size:24px
+    style H fill:#FFCDD2,stroke:#D50000,font-size:24px
+    style G1 fill:#FFF9C4,stroke:#FFD600,font-size:24px
+    style H1 fill:#FFF9C4,stroke:#FFD600,font-size:24px
+    style J fill:#C8E6C9,stroke:#00C853,font-size:24px
+    style M fill:#FFCDD2,stroke:#D50000,font-size:24px
+    style K fill:#C8E6C9,stroke:#00C853,font-size:24px
+    style L fill:#FFCDD2,stroke:#D50000,font-size:24px
+    style K1 fill:#FFF9C4,stroke:#FFD600,font-size:24px
+    style L1 fill:#FFF9C4,stroke:#FFD600,font-size:24px
+    style N fill:#C8E6C9,stroke:#00C853,font-size:24px
+    style O fill:#FFCDD2,stroke:#D50000,font-size:24px
+    style N1 fill:#FFF9C4,stroke:#FFD600,font-size:24px
+    style O1 fill:#FFF9C4,stroke:#FFD600,font-size:24px
