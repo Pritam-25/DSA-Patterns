@@ -1,1 +1,7 @@
 *.exe
+**/_*.md
+.obsidian
+.github
+.clang-format
+.idea
+*.iml

@@ -1,3 +1,4 @@
+tags: #DSA/BinarySearch/lower_and_upper_bound
 # 🧠 LOWER BOUND & UPPER BOUND MASTER SHEET
 
 

@@ -23,7 +23,9 @@ Example:
 0 1 1 2 3 5 8 13 ...
 ```
 
-## 🧾 Code
+## 🌀 1. Normal Recursion
+
+### 🧾 Code
 
 ```cpp id="wt98t4y"
 int fib(int n){
@@ -35,7 +37,7 @@ int fib(int n){
 }
 ```
 
-## 🌳 Recursion Tree for fib(5)
+### 🌳 Recursion Tree for fib(5)
 
 ```mermaid
 graph TD
@@ -63,7 +65,7 @@ H --> N["fib(1)"]
 H --> O["fib(0)"]
 ```
 
-## 🚨 Main Problem
+### 🚨 Main Problem
 
 See repeated calls:
 
@@ -74,7 +76,7 @@ fib(2) repeated multiple times
 
 This is called:
 
-## 🔥 Overlapping Subproblems
+### 🔥 Overlapping Subproblems
 
 Dynamic Programming works when:
 
@@ -82,9 +84,9 @@ Dynamic Programming works when:
 same subproblem repeats
 ```
 
-# ⏱ Complexity
+### ⏱ Complexity
 
-## Time Complexity
+#### Time Complexity
 
 Each call creates 2 more calls:
 
@@ -94,7 +96,7 @@ O(2^n)
 
 (exponential)
 
-## Space Complexity
+#### Space Complexity
 
 Maximum recursion depth:
 
@@ -116,16 +118,16 @@ O(n)
 
 (recursion stack)
 
-# 🚀 2. MEMOIZATION (TOP-DOWN DP)
+## 🌀 2. MEMOIZATION (TOP-DOWN DP)
 
-## 💡 Idea
+### 💡 Idea
 
 ```text
 Don't recompute same state again
 Store already solved answers
 ```
 
-## 🧾 Code
+### 🧾 Code
 
 ```cpp
 class Solution {
@@ -155,7 +157,7 @@ public:
 };
 ```
 
-### 🔥 MOST IMPORTANT IDEA
+#### 🔥 MOST IMPORTANT IDEA
 
 When:
 
@@ -169,17 +171,17 @@ becomes true:
 NO recursion happens
 ```
 
-## 🌳 Memoization Tree
+### 🌳 Memoization Tree
 
-![image.png](../../images/fibonacci_series_using_dynamic_programming.png)
+![image.png](../diagrams/fibonacci_using_dynamic_programming.dark.svg)
 
-### Note:
+#### Note:
 
 ```text
 here dp[0] and dp[1] are not filled we are directly returning dp[n]
 ```
 
-## 📦 DP Array Filling
+### 📦 DP Array Filling
 
 ```text
 dp[0] = -1 (not filled)
@@ -194,7 +196,7 @@ dp[5] = 5
 For Storing the dp[0] and dp[1] we can change simly return dp[n] = n in base case;
 ```
 
-# 🧾 Code
+### 🧾 Code
 
 ```cpp id="xzz2j1s"
 // before
@@ -206,7 +208,7 @@ if(n <= 1)
     return dp[n] = n;
 ```
 
-## 🌳 Memoization Tree
+### 🌳 Memoization Tree
 
 For:
 
@@ -239,7 +241,7 @@ B --> K["dp[4]=3"]
 A --> L["dp[5]=5"]
 ```
 
-## 📦 DP Array Filling
+### 📦 DP Array Filling
 
 ```text
 dp[0] = 0
@@ -252,9 +254,9 @@ dp[5] = 5
 
 Direct return.
 
-## ⏱ Time Complexity
+### ⏱ Time Complexity
 
-## Number of unique states
+### Number of unique states
 
 ```text
 0 → n
@@ -274,11 +276,11 @@ So:
 O(n)
 ```
 
-## ⏱ Space Complexity
+### ⏱ Space Complexity
 
 Two things consume space:
 
-## 1. DP Array
+#### 1. DP Array
 
 ```text
 dp[0...n]
@@ -290,7 +292,7 @@ Size:
 O(n)
 ```
 
-## 2. Recursion Stack
+#### 2. Recursion Stack
 
 Deepest chain:
 
@@ -308,7 +310,7 @@ Depth:
 O(n)
 ```
 
-## ✅ Total Space
+### ✅ Total Space
 
 ```text
 O(n) + O(n)
@@ -333,9 +335,9 @@ fib(5)
    → fib(3)
 ```
 
-# 🚀 3. TABULATION (BOTTOM-UP DP)
+## 🌀 3. TABULATION (BOTTOM-UP DP)
 
-## 💡 Idea
+### 💡 Idea
 
 Instead of recursion:
 
@@ -343,7 +345,7 @@ Instead of recursion:
 Build answers from small → large
 ```
 
-## 🧾 Code
+### 🧾 Code
 
 ```cpp id="73n7v4k"
 class Solution {
@@ -366,7 +368,7 @@ public:
 };
 ```
 
-## 🧠 Mental Model
+### 🧠 Mental Model
 
 ```text
 Already know:
@@ -380,7 +382,7 @@ fib(4)
 ...
 ```
 
-## 🌳 DP Table Building
+### 🌳 DP Table Building
 
 For:
 
@@ -388,14 +390,14 @@ For:
 n = 5
 ```
 
-## Initial
+### Initial
 
 ```text
 index : 0 1 2 3 4 5
 dp    : 0 1 _ _ _ _
 ```
 
-## i = 2
+#### i = 2
 
 ```text
 dp[2] = dp[1] + dp[0]
@@ -407,7 +409,7 @@ dp[2] = dp[1] + dp[0]
 0 1 1 _ _ _
 ```
 
-## i = 3
+#### i = 3
 
 ```text
 dp[3] = dp[2] + dp[1]
@@ -419,7 +421,7 @@ dp[3] = dp[2] + dp[1]
 0 1 1 2 _ _
 ```
 
-## i = 4
+#### i = 4
 
 ```text
 dp[4] = dp[3] + dp[2]
@@ -431,7 +433,7 @@ dp[4] = dp[3] + dp[2]
 0 1 1 2 3 _
 ```
 
-## i = 5
+#### i = 5
 
 ```text
 dp[5] = dp[4] + dp[3]
@@ -443,7 +445,7 @@ dp[5] = dp[4] + dp[3]
 0 1 1 2 3 5
 ```
 
-## ⏱ Time Complexity
+### ⏱ Time Complexity
 
 Loop runs:
 
@@ -457,7 +459,7 @@ So:
 O(n)
 ```
 
-## ⏱ Space Complexity
+### ⏱ Space Complexity
 
 DP array size:
 
@@ -484,7 +486,7 @@ fib(1)
 
 ([AlgoMap][2])
 
-## 🔥 MEMOIZATION vs TABULATION
+### 🔥 MEMOIZATION vs TABULATION
 
 | Feature                | Memoization     | Tabulation       |
 | ---------------------- | --------------- | ---------------- |
@@ -495,9 +497,9 @@ fib(1)
 | Easy to write          | Easier          | Harder sometimes |
 | Risk of stack overflow | Yes             | No               |
 
-# 🚀 4. SPACE OPTIMIZATION
+## 🌀 4. SPACE OPTIMIZATION
 
-## 💡 Key Observation
+### 💡 Key Observation
 
 For Fibonacci:
 
@@ -511,7 +513,7 @@ So entire array NOT needed.
 
 Only previous 2 values needed.
 
-## 🧾 Code
+### 🧾 Code
 
 ```cpp id="q4j9p42"
 class Solution {
@@ -538,7 +540,7 @@ public:
 };
 ```
 
-## 🧠 Dry Run
+### 🧠 Dry Run
 
 For:
 
@@ -546,14 +548,14 @@ For:
 n = 5
 ```
 
-### Initial
+#### Initial
 
 ```text
 prev2 = 0
 prev1 = 1
 ```
 
-### i = 2
+#### i = 2
 
 ```text
 curr = 1 + 0 = 1
@@ -562,7 +564,7 @@ prev2 = 1
 prev1 = 1
 ```
 
-### i = 3
+#### i = 3
 
 ```text
 curr = 1 + 1 = 2
@@ -571,7 +573,7 @@ prev2 = 1
 prev1 = 2
 ```
 
-### i = 4
+#### i = 4
 
 ```text
 curr = 2 + 1 = 3
@@ -580,7 +582,7 @@ prev2 = 2
 prev1 = 3
 ```
 
-### i = 5
+#### i = 5
 
 ```text
 curr = 3 + 2 = 5
@@ -595,7 +597,7 @@ Answer:
 5
 ```
 
-## ⏱ Time Complexity
+### ⏱ Time Complexity
 
 Loop runs n times:
 
@@ -603,7 +605,7 @@ Loop runs n times:
 O(n)
 ```
 
-## ⏱ Space Complexity
+### ⏱ Space Complexity
 
 Only variables used:
 
@@ -619,7 +621,7 @@ Constant memory:
 O(1)
 ```
 
-## 🌟 FINAL EVOLUTION
+### 🌟 FINAL EVOLUTION
 
 ```text
 Recursion
@@ -633,11 +635,11 @@ Space Optimization
 
 ## 🧠 COMPLETE DP MENTAL MODEL
 
-## Step 1
+### Step 1
 
 Write recursion.
 
-## Step 2
+### Step 2
 
 Observe:
 
@@ -645,17 +647,17 @@ Observe:
 overlapping subproblems
 ```
 
-## Step 3
+### Step 3
 
 Add memoization.
 
-## Step 4
+### Step 4
 
 Convert recursion → loop
 
 (tabulation)
 
-## Step 5
+### Step 5
 
 Observe dependencies.
 

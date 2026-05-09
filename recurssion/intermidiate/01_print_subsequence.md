@@ -225,6 +225,9 @@ Space: O(n)
 
 ![image.png](../../images/generate_subsequence_sum_greater_than_k.png)
 
+![image.png](../diagrams/generate_subsequence_prunning.light.svg)
+![image.png](../diagrams/generate_subsequence_prunning.dark.svg)
+
 ### 3. Count no of subsequences with sum = k
 
 #### 🧠 KEY IDEA (VERY IMPORTANT)
@@ -378,4 +381,4 @@ if (sum > k) return;   // pruning
 ✅ Valid ONLY when:
 >All elements in the array are POSITIVE
 
-👉 Because once **sum > k**, adding more positive numbers will only increase the sum further — so no valid solution can exist.
+👉 Because once `sum > k`, adding more positive numbers will only increase the sum further — so no valid solution can exist.
