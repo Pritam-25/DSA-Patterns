@@ -9,7 +9,7 @@ This repository is organized as a dynamic programming roadmap with problem-wise 
 
 <br>
 
-- [x] 1. Introduction to DP(fibonacci series example)
+- [x] [1. Introduction to DP(fibonacci series example)](01%20fibonacci%20series/)
 
 </details>
 
@@ -18,11 +18,11 @@ This repository is organized as a dynamic programming roadmap with problem-wise 
 
 <br>
 
-- [x] 2. Climbing stairs
-- [x] 3. Frog Jump
-- [x] 4. Frog jump with K distances
-- [x] 5. Maximum sum of non adjacent elements
-- [x] 6. House robber
+- [x] [2. Climbing stairs](02%20Climbing%20Stairs/README.md)
+- [x] [3. Frog Jump](03%20Frog%20Jump/README.md)
+- [x] [4. Frog jump with K distances](04%20Frog%20Jump%20with%20K%20distances/README.md)
+- [x] [5. Maximum sum of non adjacent elements](05%20Maximum%20sum%20of%20non%20adjacent%20elements/README.md)
+- [x] [6. House robber](06%20House%20 robber/README.md)
 
 </details>
 
