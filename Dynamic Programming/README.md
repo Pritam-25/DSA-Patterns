@@ -18,11 +18,11 @@ This repository is organized as a dynamic programming roadmap with problem-wise 
 
 <br>
 
-- [x] [2. Climbing stairs](02%20Climbing%20Stairs/README.md)
-- [x] [3. Frog Jump](03%20Frog%20Jump/README.md)
-- [x] [4. Frog jump with K distances](04%20Frog%20Jump%20with%20K%20distances/README.md)
-- [x] [5. Maximum sum of non adjacent elements](05%20Maximum%20sum%20of%20non%20adjacent%20elements/README.md)
-- [x] [6. House robber](06%20House%20 robber/README.md)
+- [x] [2. Climbing stairs](02%20Climbing%20Stairs/)
+- [x] [3. Frog Jump](03%20Frog%20Jump%20I/)
+- [x] [4. Frog jump with K distances]()
+- [x] [5. Maximum sum of non adjacent elements](04%20Max%20Sum%20without%20Adjacents/)
+- [x] [6. House robber](05%20House%20Robber%20I/)
 
 </details>
 
@@ -31,7 +31,7 @@ This repository is organized as a dynamic programming roadmap with problem-wise 
 
 <br>
 
-- [x] 7. Ninja's training
+- [x] [7. Ninja's training](06%20Ninja%20Training/)
 - [ ] 8. Grid Unique Paths : DP on Grids
 - [ ] 9. Unique paths II
 - [ ] 10. Minimum Path Sum in Grid
@@ -46,12 +46,12 @@ This repository is organized as a dynamic programming roadmap with problem-wise 
 
 <br>
 
-- [x] 14. Subset sum equal to target
-- [x] 15. Partition equal subset sum
-- [x] 16. Partition a set into two subsets with minimum absolute sum difference
-- [x] 17. Count subsets with sum K
+- [x] [14. Subset sum equal to target](./Dp%20On%20Subsequence/14%20Subset%20sum%20equal%20to%20target/)
+- [x] [15. Partition equal subset sum](./Dp%20On%20Subsequence/15%20Partition%20equal%20subset%20sum/)
+- [x] [16. Partition a set into two subsets with minimum absolute sum difference](./Dp%20On%20Subsequence/16%20Partition%20a%20set%20into%20two%20subsets%20with%20minimum%20absolute%20sum%20difference/)
+- [x] [17. Count subsets with sum K](./Dp%20On%20Subsequence/17%20Counts%20Subsets%20with%20Sum%20K/)
 - [ ] 18. Count partitions with given difference
-- [x] 19. Assign Cookies
+- [x] [19. Knapsack problem](./Dp%20On%20Subsequence/19%20Knapsack%20Problem/)
 - [ ] 20. Minimum Coins
 - [ ] 21. Target sum
 - [ ] 22. Coin Change 2
@@ -65,13 +65,13 @@ This repository is organized as a dynamic programming roadmap with problem-wise 
 
 <br>
 
-- [x] 25. Longest common subsequence
-- [x] 26. Print Longest Common Subsequence
-- [x] 27. Longest common substring
-- [x] 28. Longest palindromic subsequence
-- [x] 29. Minimum insertions to make string palindrome
-- [x] 30. Minimum insertions or deletions to convert string A to B
-- [x] 31. Shortest common supersequence
+- [x] [25. Longest common subsequence](./Dp%20On%20String/25%20Longest%20Common%20Subsequence/)
+- [x] [26. Print Longest Common Subsequence](./Dp%20On%20String/26%20Print%20Longest%20Common%20Subsequence/)
+- [x] [27. Longest common substring](./Dp%20On%20String/27%20Longest%20Common%20Substring/)
+- [x] [28. Longest palindromic subsequence](./Dp%20On%20String/28%20Longest%20Palindromic%20Subsequence/)
+- [x] [29. Minimum insertions to make string palindrome](./Dp%20On%20String/29%20Minimum%20Insertions%20to%20Make%20String%20Palindrome/)
+- [x] [30. Minimum insertions or deletions to convert string A to B](./Dp%20On%20String/30%20Minimum%20Insertions%20or%20Deletions%20to%20Convert%20String%20A%20to%20String%20B/)
+- [x] [31. Shortest common supersequence](./Dp%20On%20String/31%20Shortest%20Common%20Supersequence/)
 - [ ] 32. Distinct subsequences
 - [ ] 33. Edit distance
 - [ ] 34. Wildcard matching
