@@ -15,7 +15,7 @@ target = sum
 Is there a subset whose sum = target ?
 ```
 
-# 💡 Core Idea
+## 💡 Core Idea
 
 ```text
 f(index, sum)
@@ -25,16 +25,14 @@ f(index, sum)
 
 ## 🐢 Version 1: EXPLORE ALL (Brute Force)
 
-## 🧾 Code
+### 🧾 Code
 
 ```cpp
 bool solve(int index, vector<int>& arr, int sum) {
 
-    if (sum < 0) return false;
+    if (sum == 0) return true;
 
-    if (index == arr.size()) {
-        return sum == 0;
-    }
+    if (index == arr.size() || sum < 0) return false;
 
     bool take = solve(index + 1, arr, sum - arr[index]);
     bool notTake = solve(index + 1, arr, sum);
@@ -43,7 +41,7 @@ bool solve(int index, vector<int>& arr, int sum) {
 }
 ```
 
-## 🌳 Recursion Tree
+### 🌳 Recursion Tree
 
 ```mermaid
 graph TD
@@ -72,13 +70,13 @@ M --> N["f(3,1) ❌"]
 M --> O["f(3,3) ❌"]
 ```
 
-## ❌ Characteristics
+### ❌ Characteristics
 
 * Explores **all paths**
 * Includes **negative sums**
 * No early stopping
 
-## 🧠 Mental Model
+### 🧠 Mental Model
 
 ```text
 "Try everything → reject later"
@@ -86,7 +84,7 @@ M --> O["f(3,3) ❌"]
 
 ## 🚚 Version 2: PRUNING (Better)
 
-## 🧾 Code
+### 🧾 Code
 
 ```cpp
 bool solve(int index, vector<int>& arr, int sum) {
@@ -106,7 +104,7 @@ bool solve(int index, vector<int>& arr, int sum) {
 }
 ```
 
-## 🌳 Recursion Tree
+### 🌳 Recursion Tree
 
 ```mermaid
 graph TD
@@ -126,13 +124,13 @@ M --> N["f(3,1) ❌"]
 M --> O["f(3,3) ❌"]
 ```
 
-## ✅ Improvements
+### ✅ Improvements
 
 * No negative sum calls
 * Smaller recursion tree
 * Early success check (`sum == 0`)
 
-## 🧠 Mental Model
+### 🧠 Mental Model
 
 ```text
 "Only explore valid paths"
@@ -140,7 +138,7 @@ M --> O["f(3,3) ❌"]
 
 ## 🚀 Version 3: EARLY STOP (Best)
 
-## 🧾 Code (Short-Circuit)
+### 🧾 Code (Short-Circuit)
 
 ```cpp
 bool solve(int index, vector<int>& arr, int sum) {
@@ -159,7 +157,7 @@ bool solve(int index, vector<int>& arr, int sum) {
 }
 ```
 
-## 🌳 Actual Execution Tree
+### 🌳 Actual Execution Tree
 
 ```mermaid
 graph TD
@@ -172,19 +170,19 @@ B -->|"RETURN TRUE ↑"| A
 A -->|"❌ SKIPPED"| I["f(1,3)"]
 ```
 
-## 🚀 Advantages
+### 🚀 Advantages
 
 * Stops at **first valid subset**
 * Avoids exploring remaining tree
 * Best practical performance
 
-## 🧠 Mental Model
+### 🧠 Mental Model
 
 ```text
 "Find one answer → STOP everything"
 ```
 
-# ⚔️ Comparison
+## ⚔️ Comparison
 
 | Feature       | 🔴 Explore All | 🟡 Pruning | 🟢 Early Stop |
 | ------------- | -------------- | ---------- | ------------- |
@@ -194,7 +192,7 @@ A -->|"❌ SKIPPED"| I["f(1,3)"]
 | Tree size     | Largest        | Medium     | Smallest      |
 | Efficiency    | ❌ Worst        | ✅ Better   | 🚀 Best       |
 
-# ⏱️ Complexity
+## ⏱️ Complexity
 
 | Case              | Complexity |
 | ----------------- | ---------- |
@@ -202,7 +200,7 @@ A -->|"❌ SKIPPED"| I["f(1,3)"]
 | Best (early stop) | O(n)       |
 | Space             | O(n)       |
 
-# 🔥 Key Insights
+## 🔥 Key Insights
 
 ### 1. Pruning
 
@@ -223,7 +221,7 @@ take || notTake → evaluates both
 early return → stops immediately
 ```
 
-# ⚡ Final Mental Model
+## ⚡ Final Mental Model
 
 ```text
 Subset → binary choice

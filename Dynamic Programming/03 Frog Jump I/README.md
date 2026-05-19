@@ -152,7 +152,7 @@ k + 1
 
 Then search entire remaining array to find the next stone.
 
-## 🧾 Code
+## [🧾 Code](./01_normal_recursion.cpp)
 
 ```cpp
 class Solution {
@@ -184,28 +184,13 @@ class Solution {
 };
 ```
 
-## 🌳 Recursion Tree
-
-For:
-
-```text
-stones = [0,1,3,5]
-```
+## 🌳 Recursion Tree (`stones = [0,1,3,5,6,8,12,17]`)
 
 ![image.png](../diagrams/frog_jump_I_recursion_tree.dark.svg)
 
 ## 🚨 Problem in This Approach
 
-Repeated states happen again and again.
-
-Example:
-
-```text
-dfs(3,2)
-dfs(3,3)
-```
-
-may be recalculated multiple times.
+> Repeated states happen again and again. may be recalculated multiple times.
 
 This causes:
 
@@ -225,13 +210,17 @@ Each state can branch into:
 
 So worst case becomes:
 
-**O(3ⁿ)**
+```text
+O(3ⁿ)
+```
 
 ### Space Complexity
 
 Maximum recursion depth:
 
-**O(n)**
+```text
+O(n)
+```
 
 (recursion stack)
 
@@ -241,7 +230,7 @@ Maximum recursion depth:
 
 ## 💡 Observation
 
-Array is sorted.
+**Array is sorted**.
 
 So if:
 
@@ -257,7 +246,7 @@ all future stones will also be bigger
 
 So we can stop searching early.
 
-## 🧾 Optimized Code
+## [🧾 Optimized Code](./01_normal_recursion.cpp)
 
 ```cpp
 class Solution {
@@ -305,11 +294,15 @@ So complexity remains exponential.
 
 ### Time Complexity
 
-**O(3ⁿ)**
+```text
+O(3ⁿ)
+```
 
 ### Space Complexity
 
-**O(n)**
+```text
+O(n)
+```
 
 <a id="solution-3"></a>
 
@@ -378,11 +371,15 @@ O(n)
 
 ### Time Complexity
 
-**O(3ⁿ log n)**
+```text
+O(3ⁿ log n)
+```
 
 ### Space Complexity
 
-**O(n)**
+```text
+O(n)
+```
 
 <a id="solution-4"></a>
 
@@ -404,7 +401,7 @@ Then next stone lookup becomes:
 O(1)
 ```
 
-## 🧾 Code
+## [🧾 Code](./03_using_map.cpp)
 
 ```cpp
 class Solution {
@@ -477,7 +474,9 @@ So recursion explosion still exists.
 
 ### Time Complexity
 
+```text
 O(3ⁿ)
+```
 
 (practically faster)
 
@@ -578,17 +577,23 @@ Both can vary up to `n`.
 
 Total states:
 
-**O(n²)**
+```text
+O(n²)
+```
 
 ### Time Complexity
 
-**O(n²)**
+```text
+O(n²)
+```
 
 ### Space Complexity
 
 DP table + recursion stack:
 
-**O(n²)**
+```text
+O(n²)
+```
 
 <a id="solution-6"></a>
 
@@ -620,7 +625,7 @@ Meaning:
 Which jump sizes can land on this stone?
 ```
 
-## 🧾 Code
+## [🧾 Code](./05_tabulation.cpp)
 
 ```cpp
 class Solution {
