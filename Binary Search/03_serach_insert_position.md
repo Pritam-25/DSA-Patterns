@@ -1,4 +1,5 @@
-# 🔍 [🧠 Search Insert Position (Binary Search)](https://leetcode.com/problems/search-insert-position/)
+# <img src="https://assets.leetcode.com/static_assets/public/icons/favicon-32x32.png" width="28"> [Search Insert Position](https://leetcode.com/problems/search-insert-position/)
+
 
 # 🤔 Problem
 
