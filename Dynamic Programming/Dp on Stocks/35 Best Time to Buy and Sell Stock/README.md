@@ -67,10 +67,10 @@ We check all pairs:
 
 ### ⏱️ Complexity Analysis
 
-| Metric | Complexity |
-| --- | ---: |
-| Time complexity | O(N^2) |
-| Space complexity | O(1) |
+| Metric           | Complexity |
+| ---------------- | ---------: |
+| Time complexity  |     O(N^2) |
+| Space complexity |       O(1) |
 
 ## 🚀 Optimal Greedy Approach
 
@@ -128,10 +128,10 @@ public:
 
 ### ⏱️ Complexity Analysis
 
-| Metric | Complexity |
-| --- | ---: |
-| Time complexity | O(N) |
-| Space complexity | O(1) |
+| Metric           | Complexity |
+| ---------------- | ---------: |
+| Time complexity  |       O(N) |
+| Space complexity |       O(1) |
 
 ## 🎯 Why Greedy Works?
 
