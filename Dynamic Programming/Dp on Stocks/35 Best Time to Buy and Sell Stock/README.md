@@ -184,4 +184,4 @@ buy and sell on same day
 
 ## 🎥 Video Tutorial
 
-![Striver YouTube Tutorial](https://youtu.be/excAOvwF_Wk?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&utm_source=chatgpt.com)
+[![Watch the video](https://img.youtube.com/vi/excAOvwF_Wk/maxresdefault.jpg)](https://youtu.be/excAOvwF_Wk?list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY)
